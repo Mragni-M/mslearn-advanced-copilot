@@ -10,6 +10,78 @@ Gain more practical experience by using this repository that contains a Python W
 1. Enable your [GitHub Copilot service](https://github.com/github-copilot/signup)
 1. Open [this repository with Codespaces](https://codespaces.new/MicrosoftDocs/mslearn-copilot-codespaces-python)
 
+# Apply advanced GitHub Copilot techniques
+
+[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/MicrosoftDocs/mslearn-advanced-copilot)
+
+## Getting Started
+
+Follow these steps to set up and run the project locally:
+
+### Prerequisites
+
+Ensure you have the following installed:
+- Python 3.10 or higher
+- `pip` (Python package manager)
+
+### Installation
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/your-repo/mslearn-advanced-copilot.git
+   cd mslearn-advanced-copilot
+   ```
+
+2. Create a virtual environment:
+   ```bash
+   python -m venv venv
+   source venv/bin/activate  # On Windows, use `venv\Scripts\activate`
+   ```
+
+3. Install the dependencies:
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+### Running the Application
+
+1. Start the FastAPI server:
+   ```bash
+   uvicorn main:app --reload
+   ```
+
+2. Open your browser and navigate to:
+   ```
+   http://127.0.0.1:8000/docs
+   ```
+   This will open the API documentation where you can test the endpoints.
+
+### Running Tests
+
+To run the tests, use the following command:
+```bash
+pytest
+```
+
+### Project Structure
+
+- `main.py`: Contains the FastAPI application and routes.
+- `test_main.py`: Contains the test cases for the API.
+- `weather.json`: Contains the weather data used by the API.
+
+### Notes
+
+- The API exposes endpoints to retrieve countries, cities, and weather data for specific months.
+- You can modify the `weather.json` file to add or update data.
+
+## Contributing
+
+See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines on how to contribute to this project.
+
+## License
+
+This project is licensed under the [MIT License](LICENSE-CODE).
+
 ## 💪🏽 Exercise
 The current API is not exposing country/{country} which needs to be implemented to list cities. The route should allow only GET HTTP requests with a JSON response providing information from the historical high and low for that country, city, and given month.
 
